@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>好きな音楽</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <header>
+        <h1>好きな音楽</h1>
+    </header>
+    <section class="music">
+        <h2>好きな曲</h2>
+        <button class="toggle-details">曲の詳細を表示</button>
+        <div class="details">
+            <h3>アーティスト: 上白石萌音×内澤崇仁</h3>
+            <p>曲名: ハッピーエンド</p>
+            <p>歌詞がかわいいのと声がかわいいとこが好き。</p>
+        </div>
+        <div class="details">
+            <h3>アーティスト: ねぐせ。</h3>
+            <p>曲名: 日常革命</p>
+            <p>歌詞だったりメロディーが好き。</p>
+        </div>
+        <div class="details">
+            <h3>アーティスト: Saucy Dog</h3>
+            <p>曲名: 魔法が解けたら</p>
+            <p>メロディーが好き。</p>
+        </div>
+    </section>
+    <footer>
+        <p><a href="index.html">ホームへ戻る</a></p>
+    </footer>
+</body>
+</html>
+<!-- <!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>流れ星アニメーション</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background: black;
+        }
+        canvas {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="starCanvas"></canvas>
+    <script>
+        const canvas = document.getElementById('starCanvas');
+        const ctx = canvas.getContext('2d');
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        const stars = [];
+        const numStars = 100;
+
+        class Star {
+            constructor() {
+                this.x = Math.random() * canvas.width;
+                this.y = Math.random() * canvas.height;
+                this.size = Math.random() * 3 + 1;
+                this.speed = Math.random() * 2 + 1;
+            }
+
+            update() {
+                this.x += this.speed;
+                if (this.x > canvas.width) {
+                    this.x = -this.size;
+                    this.y = Math.random() * canvas.height;
+                }
+            }
+
+            draw() {
+                ctx.fillStyle = 'white';
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                ctx.fill();
+            }
+        }
+
+        function init() {
+            for (let i = 0; i < numStars; i++) {
+                stars.push(new Star());
+            }
+        }
+
+        function animate() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            stars.forEach(star => {
+                star.update();
+                star.draw();
+            });
+            requestAnimationFrame(animate);
+        }
+
+        init();
+        animate();
+    </script>
+</body>
+</html> -->

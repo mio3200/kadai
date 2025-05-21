@@ -1,0 +1,165 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center; /* デフォルトで中央揃え */
+    min-height: 100vh;
+   
+    background-color: black; /* 背景色を黒に設定 (流れ星が見やすいように) */
+}
+
+html {
+    min-height: 100vh;
+}
+
+.wrapper {
+    max-width: 980px; /* 全体の最大幅を設定 */
+    margin: 20px auto; /* 中央揃え */
+    background-color: white; /* コンテンツの背景色 */
+    border-radius: 10px; /* 角を丸くする (お好みで) */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 影をつける (お好みで) */
+    padding: 20px; /* 内側の余白 */
+    text-align: left; /* wrapper 内のテキストは左揃えに戻す */
+    position: relative; /* z-index の基準 */
+    z-index: 1; /* iframe より前面に表示 */
+}
+
+header {
+    background-color: #2d1045;
+    color: white;
+    padding: 20px;
+    text-align: center; /* ヘッダー内のテキストは中央揃え */
+}
+
+section {
+    margin: 20px 0; /* 上下の margin のみ */
+    padding: 20px;
+    color: #ccc;
+    border-bottom: 1px solid #ccc;
+}
+
+/* 最後のセクションのボーダーを削除 */
+section:last-child {
+    border-bottom: none;
+}
+
+.profile {
+    text-align: center; /* プロフィール画像と名前などを中央揃え */
+    padding: 20px;
+    color: #333; /* テキストの色 */
+    background-color: transparent; /* 背景を透明にする */
+}
+
+.profile img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.details {
+    width: 980px; /* 左右幅を980pxに固定 */
+    margin: 20px auto; /* 中央揃え */
+    padding: 15px;
+    /* background-color: #f9f9f9; /* 詳細情報の背景色 */
+    /* border-radius: 5px; */
+    /* box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); */ */
+    text-align: left;
+}
+
+.details ul {
+    list-style: none;
+    padding: 0;
+    padding-left: 20px;
+}
+
+.details li {
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.details li:last-child {
+    border-bottom: none;
+}
+
+.details img {
+    display: block;
+    margin: 10px auto;
+    max-width: 960px;
+    height: auto;
+    border-radius: 5px;
+}
+
+footer {
+    background-color: #5300c6;
+    color: rgb(249, 249, 247);
+    padding: 10px;
+    text-align: center; /* フッター内のテキストを中央揃え */
+}
+
+.stars-iframe {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* 最背面に配置 */
+    background-color: transparent;
+}
+.header-nav {
+    display: flex;
+    list-style: none; /* リストのマーカーを消す */
+    padding: 0;
+    margin: 0;
+}
+
+.header-nav li {
+    margin: 0 15px; /* アイテム同士の間隔を調整 */
+}
+.header-nav {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.header-nav li {
+    margin: 10px;
+}
+
+.header-nav a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff; /* ボタンの背景色 */
+    color: white; /* 文字色 */
+    border-radius: 5px; /* 角丸 */
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.header-nav a:hover {
+    background-color: #0056b3; /* ホバー時の背景色 */
+    transform: scale(1.1); /* 少し拡大 */
+}
+
+.header-nav a:active {
+    background-color: #00408d; /* 押したときの背景色 */
+}
+.container {
+    width: 90%;
+    margin: auto;
+}
+@media screen and (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+.container {
+    display: flex;
+    flex-direction: column; /* スマホでは縦並び */
+}
