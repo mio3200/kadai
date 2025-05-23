@@ -61,10 +61,7 @@ section:last-child {
     width: 980px; /* 左右幅を980pxに固定 */
     margin: 20px auto; /* 中央揃え */
     padding: 15px;
-    /* background-color: #f9f9f9; /* 詳細情報の背景色 */
-    /* border-radius: 5px; */
-    /* box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); */ */
-    text-align: left;
+  text-align: left;
 }
 
 .details ul {
@@ -150,16 +147,62 @@ footer {
     width: 90%;
     margin: auto;
 }
-@media screen and (max-width: 768px) {
+/* @media screen and (max-width: 768px) {
     body {
         font-size: 14px;
+        width: 100%;
     }
-}
+
 img {
     max-width: 100%;
     height: auto;
 }
 .container {
     display: flex;
-    flex-direction: column; /* スマホでは縦並び */
+    flex-direction: column;
 }
+} */
+
+ @media (max-width: 768px) {
+    .wrapper,
+    .details {
+        width: 95%; 
+        margin: 10px auto;
+        padding: 10px;
+    }
+
+    .header-nav {
+        flex-direction: column; 
+        align-items: center;
+    }
+
+    .header-nav li {
+        margin: 5px 0;
+    }
+
+    .header-nav a {
+        width: 200px; 
+        text-align: center;
+    }
+
+
+    .profile img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .details img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    section {
+        padding: 10px;
+    }
+
+    footer {
+        padding: 10px;
+        font-size: 14px;
+    }
+} 
+
